@@ -211,7 +211,7 @@ namespace MusicXmlParser.xmlParser
 
                             // 存入小节
                             Measure measure = new Measure(_measureSymbolList);
-                            measure.SetMeasureUnit(maxCount);
+                            measure.SetMaxCount(maxCount);
                             if (_measureBeat == null)
                             {
                                 measure.SetHasBeat(false);

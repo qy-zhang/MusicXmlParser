@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MusicXmlParser.util;
 
 namespace MusicXmlParser.symbol
 {
@@ -10,7 +11,8 @@ namespace MusicXmlParser.symbol
         private Head _lowHead;
         private bool _hasHead; // 小节首部是否有头部信息
         private bool _hasBeat; // 小节首部是否有拍号信息
-        private int _measureUnit; // 小节中乐符占用多少个unit
+        private int _maxCount; // 小节中高低表乐符数最大值
+        private int _measureLength; // 小节总长度
 
         public Measure(List<List<List<Symbol>>> measureSymbolList)
         {
@@ -41,8 +43,12 @@ namespace MusicXmlParser.symbol
 
         public void SetHead(Head highHead, Head lowHead) { _highHead = highHead; _lowHead = lowHead; }
 
-        public void SetMeasureUnit(int maxCount) { _measureUnit = maxCount; }
+        public void SetMaxCount(int maxCount) { _maxCount = maxCount; }
 
-        public int GetMeasureUnit() { return _measureUnit; }
+        public int GetMaxCount() { return _maxCount; }
+
+        public void SetMeasureLength(int measureLength) { _measureLength = measureLength; }
+
+        public int GetMeasureLength() { return _measureLength; }
     }
 }

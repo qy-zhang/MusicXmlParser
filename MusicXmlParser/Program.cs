@@ -15,7 +15,7 @@ namespace MusicXmlParser
             ScoreGenerator scoreGenerator = new ScoreGenerator(xmlFacade.GetBeat().GetBeats(), xmlFacade.GetBeat().GetBeatType());
             List<List<List<List<List<Symbol>>>>> scoreList = scoreGenerator.Generate(xmlFacade.GetHighSymbolList(), xmlFacade.GetLowSymbolList());
 
-//            List<List<List<List<List<Symbol>>>>> scoreList2 = scoreGenerator.Generate(xmlFacade.GetMeasureSymbolList());
+            List<List<Measure>> scoreList2 = scoreGenerator.Generate(xmlFacade.GetMeasureList(), 600);
 
             Console.WriteLine("test");
         }
