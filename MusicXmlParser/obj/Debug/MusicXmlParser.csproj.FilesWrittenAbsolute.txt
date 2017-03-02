@@ -1,0 +1,5 @@
+/Users/Qian/Documents/workspace/RiderProjects/MusicXmlParser/MusicXmlParser/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/Qian/Documents/workspace/RiderProjects/MusicXmlParser/MusicXmlParser/bin/Debug/MusicXmlParser.exe.mdb
+/Users/Qian/Documents/workspace/RiderProjects/MusicXmlParser/MusicXmlParser/bin/Debug/MusicXmlParser.exe
+/Users/Qian/Documents/workspace/RiderProjects/MusicXmlParser/MusicXmlParser/obj/Debug/MusicXmlParser.exe
+/Users/Qian/Documents/workspace/RiderProjects/MusicXmlParser/MusicXmlParser/obj/Debug/MusicXmlParser.exe.mdb
