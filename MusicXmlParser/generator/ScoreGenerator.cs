@@ -124,16 +124,22 @@ namespace MusicXmlParser.generator
             return scoreList;
         }
 
-        public List<List<Measure>> Generate(List<Measure> measureList)
+        public List<List<Measure>> Generate(List<Measure> measureList, float[] screenSize)
         {
             List<List<Measure>> scoreList = new List<List<Measure>>(); // 整张乐谱
-            for (int i = 0; i < measureList.Count; i++)
+            int index = 0;
+            while (index < measureList.Count)
             {
                 List<Measure> paragraphList = new List<Measure>(); // 一行
-//                for (int j = 0; j < 4; j++)
-//                {
-//                    paragraphList.Add(measureList[i + j]);
-//                }
+                paragraphList.Add(measureList[index]); // 首先在一行中放入一个小节
+                int usedLen = measureList[index].GetMeasureUnit() * 10; // 此时一行中使用的长度
+                while (usedLen < screenSize[0])
+                {
+
+                    usedLen += measureList[index].GetMeasureUnit() * 10;
+                    index++;
+                }
+
                 scoreList.Add(paragraphList);
             }
             return scoreList;

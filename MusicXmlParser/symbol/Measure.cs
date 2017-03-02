@@ -41,10 +41,7 @@ namespace MusicXmlParser.symbol
 
         public void SetHead(Head highHead, Head lowHead) { _highHead = highHead; _lowHead = lowHead; }
 
-        public void SetMeasureUnit(int totalDuration)
-        {
-//            _measureUnit = Math.Max()
-        }
+        public void SetMeasureUnit(int maxCount) { _measureUnit = maxCount; }
 
         public int GetMeasureUnit() { return _measureUnit; }
     }

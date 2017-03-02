@@ -207,14 +207,11 @@ namespace MusicXmlParser.xmlParser
                         if (xmlReader.Name.Equals("measure")) // 小节结束
                         {
                             // 整合这一个小节中的乐符
-//                            _setSymbolList.Add(_highSymbolMeasure);
-//                            _setSymbolList.Add(_lowSymbolMeasure);
-//                            _measureSymbolList.Add(_setSymbolList);
-                            int totalDuration = ArrangeMeasure();
+                            int maxCount = ArrangeMeasure();
 
                             // 存入小节
                             Measure measure = new Measure(_measureSymbolList);
-                            measure.SetMeasureUnit(totalDuration);
+                            measure.SetMeasureUnit(maxCount);
                             if (_measureBeat == null)
                             {
                                 measure.SetHasBeat(false);
@@ -412,7 +409,7 @@ namespace MusicXmlParser.xmlParser
                 setList.Add(lowList);
                 _measureSymbolList.Add(setList);
             }
-            return tempHighDuration;
+            return i >= j ? i : j;
         }
     }
 }
